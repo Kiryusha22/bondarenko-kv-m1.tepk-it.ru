@@ -19,14 +19,14 @@ header{
     margin: 0 auto;
 }
 .border{
-    border: 2px solid gray;
+    border: 2px solid darkslategray;
 }
 .btn{
     padding: 10px 20px;
     background-color: #AED0FF;
     border: #1D476B solid 1px;
     text-decoration: none;
-    color: gray;
+    color: darkslateblue;
     display: inline-block;
     margin: 5px;
     cursor: pointer;
@@ -38,7 +38,7 @@ header{
     margin-bottom: 10px;
 }
 .external{
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -63,7 +63,7 @@ header{
 .form{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     width: 80%;
     margin: 0 auto;
 }
