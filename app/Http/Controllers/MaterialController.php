@@ -30,6 +30,7 @@ class MaterialController extends Controller
         $material = Material::create($request->validated());
         return redirect()->route('materials.index');
     }
+
     public function edit(Material $material)
     {
         $materialTypes = MaterialType::all();

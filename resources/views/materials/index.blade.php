@@ -20,7 +20,7 @@
                     <h2>{{ number_format($material->quantity, 2, '.', ' ') }}</h2>
                 </div>
             </div>
-            <a href="{{ route('materials.show', $material->id) }}">Ссылка на что-то *клик*</a>
+            <a href="{{ route('materials.show', $material->id) }}">Ссылочка,Нажать!</a>
         @endforeach
     </div>
     <a class="btn" href="{{route('home')}}">Назад</a>

@@ -25,7 +25,7 @@ class FuncController extends Controller
             if (!$materialType) {
                 return -1;
             }
-            //коэффициент на единицу продукции
+            //рассчитываем коэффициент на единицу продукции
             $coefficient = $productType->coefficient;
             //проверяем процент потерь
             $loss = $materialType->defective;

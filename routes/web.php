@@ -8,3 +8,4 @@ Route::get('/', function () {
 })->name('home');
 Route::resource('materials', MaterialController::class);
 Route::get('/materials/{id}/products', [MaterialController::class, 'show'])->name('materials.show');
+
