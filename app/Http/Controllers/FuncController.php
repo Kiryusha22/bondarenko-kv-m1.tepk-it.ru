@@ -11,7 +11,7 @@ class FuncController extends Controller
     public function calculateProductionQuantity(int $product_type_id, int $material_type_id, int $quantity, float $p1, float $p2): int
     {
         try {
-            //проверка на отрицательные и нулевые значения
+            //проверяем на нулевые значния
             if ($quantity <= 0 || $p1 <= 0 || $p2 <= 0) {
                 return -1;
             }
@@ -25,17 +25,17 @@ class FuncController extends Controller
             if (!$materialType) {
                 return -1;
             }
-            //коэффициент использования материала на единицу продукции
+            //коэффициент на единицу продукции
             $coefficient = $productType->coefficient;
-            //процент потерь
+            //проверяем процент потерь
             $loss = $materialType->defective;
-            //расчёт объёма материала на единицу продукции
+            //расчитываем объем материала на единицу продукции
             $material_per_unit = $p1 * $p2 * $coefficient;
             if ($material_per_unit <= 0) {
                 return -1;
             }
             $effective_material = $quantity * (1 - $loss);
-            //итоговое количество
+            //получаем конечное количество
             return (int) floor($effective_material / $material_per_unit);
         } catch (\Exception $e) {
             return -1;
