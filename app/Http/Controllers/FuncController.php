@@ -34,9 +34,8 @@ class FuncController extends Controller
             if ($material_per_unit <= 0) {
                 return -1;
             }
-            //эффективное количество сырья после потерь
             $effective_material = $quantity * (1 - $loss);
-            //итоговое кол-во
+            //итоговое количество
             return (int) floor($effective_material / $material_per_unit);
         } catch (\Exception $e) {
             return -1;
